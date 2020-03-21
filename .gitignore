@@ -1,0 +1,6 @@
+
+# folder ignore
+_tomyinfo/
+
+# file ignore
+*.txt

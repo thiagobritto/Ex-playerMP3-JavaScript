@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blob
+
+    </title>
+</head>
+
+<body>
+
+    <input type="file" onchange="loadFile(this.files)">
+    <input id="inputFile" type="file">
+    <input id="inputDir" type="file" webkitdirectory directory multiple>
+
+    <div id="output"></div>
+
+    <embed id="pdfile" src="" type="application/pdf" width="100%" height="100%" />
+    
+    <script>
+        console.log(pdfile);
+        //
+        async function loadFile(file) {
+            let text = await file[0].text()
+            output.textContent = text
+            console.log(text);
+        }
+
+        //
+        inputFile.addEventListener('change', function () {
+            var file = new FileReader();
+            file.onload = () => {
+                output.textContent = file.result;
+            }
+            file.readAsText(this.files[0]);
+        });
+        
+        // `data:application/pdf;base64,${btoa(string)}`
+
+        inputDir.addEventListener('change', function(){
+            var file = new FileReader();
+            file.onload = () => {
+                pdfile.src = `data:application/pdf;base64,${binaryToBase64(file.result)}`
+            }
+            file.readAsText(this.files[0]);
+        });
+
+        function binaryToBase64(binary){
+            return btoa(unescape(encodeURIComponent(binary)))
+        }
+    </script>
+</body>
+
+</html>

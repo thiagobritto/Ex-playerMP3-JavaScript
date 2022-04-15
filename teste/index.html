@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="player">
+        
+        <div class="cover-class">
+            <img id="cover" src="./assets/images/rock.jpg" alt="images">
+        </div>
+        <h1 id="title">Nome da musica</h1>
+        <em><h4 id="singer">Cantor</h4></em>
+        <input id="timeline" type="range">
+        <div class="time-class">
+            <span id="time" class="init">00:00</span>
+            -
+            <span id="fulltime" class="end">00:00</span>
+        </div>
+
+        <div class="volume-class">
+            <span id="volume-down" class="small material-icons">volume_down</span>
+            <input id="volume" type="range">
+            <span id="volume-up" class="small material-icons">volume_up</span>
+        </div>
+        <div class="button-class">
+            <!--
+                skip_previous
+                skip_next
+                fast_rewind
+                fast_forward
+                
+                shuffle
+                
+                autorenew
+                replay
+                
+                audiotrack
+                
+                volume_down
+                volume_up
+                volume_mute
+                volume_off
+            -->
+            <span id="shuffle" class="small material-icons">shuffle</span>
+            <span id="prev" class="medium material-icons">skip_previous</span>
+            <span id="play" class="medium material-icons">play_circle_filled</span>
+            <span id="next" class="medium material-icons">skip_next</span>
+            <span id="replay" class="small material-icons">replay</span>
+        </div>
+    </div>
+        
+    <script type="module" src="./main.js"></script>
+    
+</body>
+</html>

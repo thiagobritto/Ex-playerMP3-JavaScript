@@ -1,0 +1,123 @@
+* {
+  font-size: 16px;
+}
+
+body{
+  background: #fff;
+}
+
+.progress-bar {
+  --progress: 0%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #ccc;
+  border-radius: 3px;
+  margin: 5px 0;
+}
+
+.progress-bar input {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.progress-bar .bt,
+.progress-bar .ov {
+  height: 5px;
+  width: 5px;
+}
+
+.progress-bar .bt {
+  height: 10px;
+  width: 10px;
+  margin: -5px;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.progress-bar .ov {
+  background-color: #777;
+  border-radius: 3px;
+  width: calc(var(--progress));
+}
+
+/* container */
+
+.container {
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+/* capa */
+
+.capa {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.capa img{
+  width: 100%;
+  max-width: 400px;
+}
+
+.legenda{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, .3);
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.display span{
+  font-size: 10px !important;
+}
+
+.controls{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  box-shadow: 0 0 15px -5px #aaa;
+  background: #fff;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  background: #fff;
+  font-size: 32px !important;
+  transition: all .3s ease-out;
+}
+
+button:hover{
+  background: #eee;
+}
+
+.volume {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0 5px;
+  overflow-Y: hidden;
+  height: 15px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Mp3</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/global.css">
+  <link rel="stylesheet" href="assets/style/player.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="capa">
+      <img src="https://via.placeholder.com/300x300.png?text=imagem+aqui" alt="">
+      <section class="legenda">
+        <h2>Artista</h2>
+        <p>Nome da música</p>
+      </section>
+    </div>
+
+    <div class="display">
+      </span> <span id="displayCurrent">00:00</span>
+      <span id="displayDuration">
+    </div>
+
+    <div class="progress-bar">
+      <input type="range" id="timeline" value="0" max="100">
+      <span class="ov"></span>
+      <span class="bt"></span>
+    </div>
+
+
+    <div class="controls">
+      <button id="btnRand" class="material-icons">shuffle</button>
+      <button id="btnPrev" class="material-icons">fast_rewind</button>
+      <button id="btnPlay" class="material-icons">play_circle_outline</button>
+      <button id="btnNext" class="material-icons">fast_forward</button>
+      <button id="btnAutoPlay" class="material-icons">repeat</button>
+    </div>
+    <div class="volume">
+      <div class="progress-bar">
+        <input type="range" id="volume" value="100" max="100">
+        <span class="ov"></span>
+        <span class="bt"></span>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
